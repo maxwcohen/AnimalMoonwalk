@@ -1,7 +1,27 @@
 body{
   margin: 0px;
-  scroll-behavior: smooth;
+  transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: initial;
 }
+
+h1{
+  font-family: "chelsea market";
+	text-align: center;
+	color: rgb(80, 43, 24);
+  font-size: 18pt;
+  letter-spacing: 2pt;
+  font-weight: bold;
+}
+
+h2{
+  font-family: "chelsea market";
+	text-align: center;
+	font-size: 12pt;
+	color: rgb(80, 43, 24);
+}
+
 .slide1{
   background-image: url("img/entourage.jpeg");
   background-size: cover;
@@ -10,11 +30,18 @@ body{
   width: 100%;
 }
 
+.slide1Content{
+  width: 80vw;
+  min-width: 400px;
+  height: 100%;
+  justify-content: flex-start !important;
+  overflow: auto;
+}
+
 .logo{
-  width: 330px;
-  position: absolute;
-  margin-left: calc((100% - 980px) * 0.5);
-  top: 20px;
+  width: calc(100px + 10vw);
+  margin-top: 20px;
+  align-self: flex-start;
 }
 
 .subhead{
@@ -26,23 +53,26 @@ body{
 }
 
 .introBlurb{
-  width: 315px;
-  /* font-size: 12pt; */
-  position: absolute;
+  width: 300px;
+  align-self: flex-end;
+  flex-grow: 0.6;
+  margin-top: 40px;
+  /* position: absolute;
   right: calc(30vw - 200px);
-  top: 20%;
+  top: 20%; */
 }
 
 .videoBox{
-  position: absolute;
-  left: 50%;
+  /* position: absolute; */
+  /* left: 50%;
   transform: translateX(-50%);
-  top: 617px;
+  top: 617px; */
   background-color: white;
   height: 448px;
   width: 548px;
   display: flex;
   flex-direction: column;
+  align-content: center;
 }
 
 .videoContainer{
@@ -62,16 +92,16 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
+  align-items: center;
 }
 
 .sectionHeader{
-  position: absolute;
+  /* position: absolute;
 	top: 10%;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 18pt;
-  letter-spacing: 2pt;
-  font-weight: bold;
+  transform: translateX(-50%); */
+  text-align: center;
+  margin-top: 80px;
 }
 
 .stepContainer{
@@ -81,21 +111,21 @@ body{
   justify-content: center;
   align-items: flex-start;
   align-content: center;
-  margin-top: 160px;
+  margin-top: 80px;
 }
 
 .step{
   display: flex;
   flex-direction: column;
   width: 170px;
-  margin: 0px 40px;
+  margin: 20px 40px;
 }
 
 .stepImage{
   width: 200px;
   height: 300px;
   background-size: cover;
-  margin-bottom: 20px;
+  box-shadow: 0px 0px 50px rgba(0,0,0,0.1);
 }
 
 .step1Img{
@@ -119,13 +149,10 @@ body{
 }
 
 .stepTitle{
-  font-family: "chelsea market";
   font-size: 14pt;
-  text-align: center;
 }
 
 .stepDesc{
-  padding-top: 20px;
   font-family: "Helvetica", "Sans Serif";
   font-weight: 400;
   text-align: center;
@@ -141,9 +168,10 @@ body{
 }
 
 .appStoreLockup{
-  width: 188px;
-  height: 105px;
-  margin-left: calc(50vw - 94px);
+  /* width: 188px; */
+  /* height: 105px; */
+  width: calc(94px + 10vw);
+  margin-left: calc(50vw - ((94px + 10vw) * 0.5));
   padding-bottom: 40px;
 }
 
@@ -151,13 +179,18 @@ body{
   background-image: url(img/dogsNcats.jpg);
   background-size: cover;
   background-position: center;
-  height: 672px;
+  /* height: 672px; */
+  height: calc(400px + 20vw);
   position: relative;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .donateBlurb{
-  width: 255px;
-  font-weight: bold;
+  width: 300px;
+  flex-grow: 0.8;
+  margin-top: 2.5vh;
+  text-align: left;
 }
 
 .donateButton{
@@ -166,7 +199,7 @@ body{
   border: none;
   font-family: "chelsea market";
   font-weight: bold;
-  font-size: 14pt;
+  font-size: 1.2rem;
   padding: 8px 40px;
   color: rgb(80, 43, 24);
   text-decoration: none;
@@ -178,15 +211,11 @@ body{
 }
 
 .wwfLogo{
-  width: 74px;
-  height: 114px;
-  margin-left: 10px;
-}
-
-.donateContent{
-  position: absolute;
-  right: calc(50vw - 320px);
-  top: 75%;
+  width: 2vw;
+  min-width: 40px;
+  display: inline-block;
+  float: right;
+  margin-top: -40px;
 }
 
 .flexRow{
@@ -195,6 +224,10 @@ body{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.donateContent{
+
 }
 
 .orangeLine{
@@ -210,4 +243,16 @@ body{
 .slide4{
   height: 585px;
   position: relative;
+}
+
+@media (max-width: 800px) {
+    .sectionHeader{
+      margin-top: 50px;
+    }
+    .slide1{
+      background-position: left 60% top 0%;
+    }
+    .introBlurb{
+      width: 250px;
+    }
 }
