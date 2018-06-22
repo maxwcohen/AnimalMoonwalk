@@ -169,7 +169,7 @@ p{
 
 .step4Img{
   background-image: url(img/step4.png);
-  background-position: center;
+  background-position: top -40px left 0px;
 }
 
 .stepTitle{
@@ -254,7 +254,8 @@ p{
 }
 
 .slide4{
-  height: 585px;
+  height: auto;
+  padding-bottom: 20px;
   position: relative;
 }
 
