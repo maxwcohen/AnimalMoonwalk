@@ -207,6 +207,16 @@ p{
   flex-grow: 0.8;
   margin-top: 2.5vh;
   text-align: left;
+  display: inline-block;
+  float: left;
+}
+
+.clearfix:after {
+   content: ""; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
 
 .donateButton{
